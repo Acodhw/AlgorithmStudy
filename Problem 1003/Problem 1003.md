@@ -42,17 +42,15 @@ For each test case, print the number of times 0 and 1 are printed, separated by 
 *Example Input/Output
 
 In:
-
+```
 2
-
 6
-
 22
-
+```
 ---
 Out:
+```
 5 
-
 8
-
 10946 17711
+```
