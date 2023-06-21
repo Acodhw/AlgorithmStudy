@@ -7,19 +7,19 @@ Lee Seok-won has ordered Cho Gyu-hyun and Baek Seung-hwan to calculate the posit
 Given the coordinates (x1, y1) of Cho Gyu-hyun and (x2, y2) of Baek Seung-hwan, as well as the distances r1 between Cho Gyu-hyun and Ryu Jae-myeong, and r2 between Baek Seung-hwan and Ryu Jae-myeong, write a program to determine the number of possible coordinates where Ryu Jae-myeong could be.
 
 ---
-Input:
+* Input:
 
 The first line contains the number of test cases, T. Each test case consists of the following:
 
 One line containing x1, y1, r1, x2, y2, r2. x1, y1, x2, y2 are integers between -10,000 and 10,000 (inclusive), and r1, r2 are non-negative integers less than or equal to 10,000.
 
 ---
-*Output:
+* Output:
 
 For each test case, print the number of possible positions where Ryu Jae-myeong could be. If the number of possible positions is infinite, print -1.
 
 ---
-*Example Input/Output
+* Example Input/Output
 
 in : 
 ```
