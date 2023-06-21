@@ -6,24 +6,34 @@ The red solid line represents the path that minimizes the number of planetary sy
 
 Given the Milky Way map, the starting point, and the destination, your task is to write a program that calculates the minimum number of planetary system entries/exits required for the Little Prince. The boundaries of the planetary systems will not overlap or intersect. Additionally, the starting point and destination will not lie on the boundary of any planetary system.
 
-*Input:
+---
+* Input:
+
 The first line of input contains the number of test cases, T. Each test case is described as follows:
 
+
 The first line of each test case contains the coordinates of the starting point (x1, y1) and the destination point (x2, y2).
+
 The second line contains the number of planetary systems, n.
+
 The following n lines describe the planetary systems, each line containing the coordinates of the center (cx, cy) and the radius (r).
 
-*Output:
+---
+* Output:
+
 For each test case, print the minimum number of planetary system entries/exits the Little Prince must go through.
 
-*Constraints:
--1000 ≤ x1, y1, x2, y2, cx, cy ≤ 1000
-1 ≤ r ≤ 1000
-1 ≤ n ≤ 50
-All coordinates and radii are integers.
+---
+* Constraints:
+1. -1000 ≤ x1, y1, x2, y2, cx, cy ≤ 1000
+2. 1 ≤ r ≤ 1000
+3. 1 ≤ n ≤ 50
+4. All coordinates and radii are integers.
 
-*Example Input/Output:
-In : 
+---
+* Example Input/Output:
+In :
+```
 2
 -5 1 12 1
 7
@@ -37,7 +47,9 @@ In :
 -5 1 5 1
 1
 0 0 2
-
+```
 Out : 
+```
 3
 0
+```
