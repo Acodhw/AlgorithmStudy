@@ -27,19 +27,19 @@ fibonacci(3) obtains the results of fibonacci(2) and fibonacci(1), and returns 2
 The number 1 is printed twice, and the number 0 is printed once. Given a value N, write a program to determine how many times 0 and 1 are printed when calling fibonacci(N).
 
 ---
-Input:
+* Input:
 
 The first line contains the number of test cases, T.
 
 Each test case consists of a single line containing the value N. N is a natural number less than or equal to 40.
 
 ---
-*Output:
+* Output:
 
 For each test case, print the number of times 0 and 1 are printed, separated by a space.
 
 ---
-*Example Input/Output
+* Example Input/Output
 
 In:
 ```
