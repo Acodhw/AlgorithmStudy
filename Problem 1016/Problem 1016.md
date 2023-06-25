@@ -11,7 +11,7 @@ The first line contains two integers, min and max.
 
 ---
 * Output
----
+  
 Print the count of "PowerNNNumbers" that are greater than or equal to min and less than or equal to max on a single line.
 
 ---
