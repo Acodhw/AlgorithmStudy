@@ -1,6 +1,4 @@
----
 
-```
 Problem URL : https://www.acmicpc.net/problem/2563
 
 Mirko is decorating a large white board of size 100 × 100 using black square papers, each of size 10 × 10.  
