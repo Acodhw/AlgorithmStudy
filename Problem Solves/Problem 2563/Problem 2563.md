@@ -37,17 +37,3 @@ Out:
 ```
 
 ---
-* Example Explanation (Visualization):
-
-Imagine the board (only partial view):
-
-| Coordinates (x, y) | Paper covers            |
-|--------------------|------------------------|
-| (3, 7)             | x = [3~12], y = [7~16] |
-| (15, 7)            | x = [15~24], y = [7~16]|
-| (5, 2)             | x = [5~14], y = [2~11] |
-
-The overlapping areas are counted only once, resulting in a total area of **260**.
-```
-
----
