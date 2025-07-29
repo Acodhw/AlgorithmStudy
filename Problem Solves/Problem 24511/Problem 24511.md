@@ -1,59 +1,63 @@
 Problem URL : https://www.acmicpc.net/problem/24511
 
-Mirko is experimenting with data structures and has prepared a sequence of **N** containers.  
-Each container functions either as:
-- A **stack** (Last-In-First-Out), or  
-- A **queue** (First-In-First-Out).
+Mirko is experimenting with a data structure made up of **N connected containers**.  
+Each container behaves as either a **stack** (Last-In-First-Out, LIFO) or a **queue** (First-In-First-Out, FIFO).  
+The containers are arranged in a sequence, and values pass through them from the **last to the first**.
 
-The containers are connected sequentially, and data is inserted through the last container and exits through the first.
+Each container contains **one initial value**, and new values can only be inserted at the end (N-th container).  
+When a new value is inserted, it **passes backward** through the containers, possibly being transformed depending on the behavior of each container.
 
-Each container either **reverses** the order of data or **keeps it** depending on its type.
-
-Given the type and initial content of each container, and a list of incoming values, simulate and print the values that come out of the first container after passing through the system.
+However, only **queue-type containers** actually allow values to pass through.  
+Stack-type containers **ignore** inserted values and always return their original initial value.
 
 ---
+
+* Core Passing Process:
+
+The exact process of how a value passes through the data structure is as follows:
+
+- Let `x₀` be the input value.
+- Insert `x₀` into the N-th container. Then immediately pop a value from the same container. Let the popped value be `x₁`.
+- Insert `x₁` into the (N−1)-th container. Then pop from it. Let the result be `x₂`.
+- Repeat this process:
+  - Insert `xᵢ` into the (N−i)-th container, pop the result as `xᵢ₊₁`.
+- Continue until the value reaches the 1st container.
+- Return `xₙ` as the final result.
+
+This simulates a value moving from the last container to the first, passing through each one and being potentially transformed.
+
+---
+
 * Input:
 
 1. The first line contains an integer **N** (1 ≤ N ≤ 100,000) — the number of containers.
-2. The second line contains N integers:
-   - `0` for queue-like containers
-   - `1` for stack-like containers
-3. The third line contains N integers, the initial data in each container.
-4. The fourth line contains an integer **M** (1 ≤ M ≤ 100,000) — the number of new input values.
-5. The fifth line contains M integers — the values to be inserted through the last container.
+2. The second line contains **N integers**:
+   - Each integer is either `0` (queue-type) or `1` (stack-type).
+3. The third line contains **N integers** — the initial values for the containers.
+4. The fourth line contains an integer **M** (1 ≤ M ≤ 100,000) — the number of values to be passed through the system.
+5. The fifth line contains **M integers** — the values to be inserted into the N-th container.
 
 ---
+
 * Output:
 
-- Print M space-separated integers — the values that come out of the **first container** after simulation.
+- Print **M integers**, separated by spaces.
+- Each number represents the final output value (`xₙ`) of the process described above for each input value.
 
 ---
+
 * Example Input/Output:
 
 In:
 ```
-5
-0 1 0 1 0
-1 2 3 4 5
-2
-100 200
+4
+0 1 1 0
+1 2 3 4
+3
+2 4 7
 ```
 
 Out:
 ```
-3 1
+4 1 2
 ```
-
----
-* Explanation Table (Container Setup):
-
-| Index | Type (0=Queue, 1=Stack) | Initial Value |
-|-------|-------------------------|----------------|
-| 1     | Queue                   | 1              |
-| 2     | Stack                   | 2              |
-| 3     | Queue                   | 3              |
-| 4     | Stack                   | 4              |
-| 5     | Queue                   | 5              |
-
-New values (`100`, `200`) are inserted from the last container (index 5) and passed in reverse if stack, or as-is if queue.  
-Final output values are what emerge from the first container after passing through the system.
