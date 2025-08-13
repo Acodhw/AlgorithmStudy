@@ -1,6 +1,5 @@
-# Baekjoon Online Judge – Problem 4779: Cantor Set
+Problem URL : https://www.acmicpc.net/problem/1015
 
-## Problem Description
 The Cantor set was discovered by Georg Cantor. It is one of the simpler fractals. It is the result of an infinite process, so for this program, printing an approximation of the whole set is enough.
 
 The following steps describe one way of obtaining the desired output for a given order Cantor set:
