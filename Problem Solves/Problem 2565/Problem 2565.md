@@ -4,6 +4,7 @@ Problem URL : https://www.acmicpc.net/problem/2563
 There are two vertical poles, A and B. Electric wires connect points on these poles such that each wire connects one unique position on pole A to one unique position on pole B. The positions along each pole are numbered from top to bottom with natural numbers.
 
 As more wires are added, some wires begin to cross. To avoid electrical hazards, you want to remove as few wires as possible so that no remaining wires cross each other.
+You can remove e.g., wires (1–8), (3–9), and (4–1) to ensure none of the remaining wires cross.
 
 <img src="https://upload.acmicpc.net/d90221dd-eb80-419f-bdfb-5dd4ebac23af/-/preview/">
 
