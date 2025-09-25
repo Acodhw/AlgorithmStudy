@@ -17,19 +17,10 @@ int main() {
 			added[i][j] += added[i][j - 1] + added[i - 1][j] - added[i - 1][j - 1];
 		}
 	}
-	cout << "\n";
 
-	for (int i = 1; i <= n; i++) {
-		for (int j = 1; j <= n; j++) {
-			cout << added[i][j] << " ";
-		}
-		cout << "\n";
-	}
-	cout << "\n";
 	while (m--) {
 		int x1, y1, x2, y2;
 		cin >> x1 >> y1 >> x2 >> y2;
-		cout << added[y2][x2] << ", " << added[y1 - 1][x2] << ", " << added[y2][x1 - 1] << ", " << added[y1 - 1][x1 - 1] << "\n";
 		cout << added[y2][x2] - added[y1 - 1][x2] - added[y2][x1 - 1] + added[y1 - 1][x1 - 1] << "\n";
 	}
 	return 0;
